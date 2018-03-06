@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { JsonSchemaFormModule} from 'angular2-json-schema-form';
+import { JsonSchemaFormModule, NoFrameworkModule} from 'angular2-json-schema-form';
 
 
 import { AppComponent } from './app.component';
@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    JsonSchemaFormModule.forRoot()
+    JsonSchemaFormModule.forRoot(NoFrameworkModule)
   ],
   providers: [],
   bootstrap: [AppComponent]

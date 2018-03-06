@@ -7,15 +7,11 @@ import * as layout from './layout';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app works!';
-  mySchema = schema;
-  myModel = {email: 'john.doe@example.com'};
   layout = layout;
-  schemaString = JSON.stringify(schema);
-  layoutString = JSON.stringify(layout);
-  onChanges = (event) => {
-    console.log(event)
-  }
+  data = '{}';
+  onChanges = ($event) => {
+    this.data = JSON.stringify($event);
+  };
   exampleJsonObject = {
     'schema': {
       'type': 'object',
